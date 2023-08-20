@@ -1,4 +1,7 @@
 const btnDarkMode = document.querySelector('.dark-mode-btn');
+const hiddenElement = document.getElementById("projects");
+const btn = document.querySelector(".project-btn");
+
 
 // 1. Checker dark theme on system option level
 
@@ -45,3 +48,9 @@ btnDarkMode.onclick = function () {
     localStorage.setItem('darkMode', 'light')
   }
 }
+
+function handleButtonClick() {
+  hiddenElement.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+btn.addEventListener("click", handleButtonClick);
